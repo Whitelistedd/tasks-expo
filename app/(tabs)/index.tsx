@@ -1,26 +1,43 @@
 import {
-  Image,
   StyleSheet,
-  Platform,
+  TextInput,
   ScrollView,
   SafeAreaView,
+  FlatList,
 } from "react-native";
 
 import { HelloWave } from "@/components/HelloWave";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { StatusBar } from "expo-status-bar";
+import { ThemedInput } from "@/components/ThemedInput";
+import { Button } from "@/components/Button";
+import { PlusSVG } from "@/assets/svg/Plus";
+import { useRef } from "react";
+import { useAppSelector } from "@/redux/store";
 
 export default function HomeScreen() {
+  const descInputRef = useRef<TextInput>(null);
+  const { tasks } = useAppSelector((state) => state.tasks);
+
   return (
     <SafeAreaView style={styles.safeAreaView}>
       <StatusBar translucent={false} backgroundColor="black" />
       <ScrollView contentContainerStyle={styles.container}>
-        <ThemedView style={styles.titleContainer}>
-          <ThemedText type="title">Welcome!</ThemedText>
-          <HelloWave />
+        <ThemedView style={styles.top}>
+          <ThemedView style={styles.topInputs}>
+            <ThemedInput
+              onSubmitEditing={() => descInputRef?.current?.focus()}
+              label="Name"
+              returnKeyType="next"
+            />
+            <ThemedInput ref={descInputRef} label="Desc" />
+          </ThemedView>
+          <Button style={styles.topButton}>
+            <PlusSVG />
+          </Button>
         </ThemedView>
-        <ThemedView style={styles.stepContainer}>
+        {/* <ThemedView style={styles.stepContainer}>
           <ThemedText type="subtitle">Step 1: Try it</ThemedText>
           <ThemedText>
             Edit{" "}
@@ -51,7 +68,7 @@ export default function HomeScreen() {
             <ThemedText type="defaultSemiBold">app</ThemedText> to{" "}
             <ThemedText type="defaultSemiBold">app-example</ThemedText>.
           </ThemedText>
-        </ThemedView>
+        </ThemedView> */}
       </ScrollView>
     </SafeAreaView>
   );
@@ -61,6 +78,20 @@ const styles = StyleSheet.create({
   safeAreaView: {
     backgroundColor: "white",
     flex: 1,
+  },
+  top: {
+    flex: 1,
+    gap: 15,
+  },
+  topInputs: {
+    flexDirection: "column",
+    gap: 10,
+  },
+  topButton: {
+    alignSelf: "flex-end",
+    paddingHorizontal: 10,
+    paddingVertical: 10,
+    borderRadius: 50,
   },
   container: {
     padding: 24,

@@ -27,7 +27,7 @@ export const ThemedInput = React.forwardRef(function ThemedInput(
 
   return (
     <View style={styles.container}>
-      {label && <ThemedText type="desc">{label}</ThemedText>}
+      {label && <ThemedText type="descSemiBold">{label}</ThemedText>}
       <TextInput
         ref={ref}
         style={[{ borderColor: inputColor }, styles.input, style]}

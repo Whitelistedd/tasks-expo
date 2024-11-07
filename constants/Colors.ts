@@ -23,6 +23,9 @@ export const Colors = {
     input: "#11181C",
     button: "#24A19C",
   },
+  general: {
+    error: "#EA4335",
+  },
   /*   dark: {
     text: "#ECEDEE",
     background: "#151718",

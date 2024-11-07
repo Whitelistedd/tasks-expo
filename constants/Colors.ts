@@ -9,7 +9,8 @@ export const Colors = {
     icon: "#687076",
     tabIconDefault: "#687076",
     tabIconSelected: tintColorLight,
-    input: "",
+    input: "#11181C",
+    button: "#24A19C",
   },
   // dark mode will be added later
   dark: {
@@ -19,7 +20,8 @@ export const Colors = {
     icon: "#687076",
     tabIconDefault: "#687076",
     tabIconSelected: tintColorLight,
-    input: "",
+    input: "#11181C",
+    button: "#24A19C",
   },
   /*   dark: {
     text: "#ECEDEE",

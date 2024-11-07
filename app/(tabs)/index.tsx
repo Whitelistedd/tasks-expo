@@ -13,31 +13,75 @@ import { StatusBar } from "expo-status-bar";
 import { ThemedInput } from "@/components/ThemedInput";
 import { Button } from "@/components/Button";
 import { PlusSVG } from "@/assets/svg/Plus";
-import { useRef } from "react";
-import { useAppSelector } from "@/redux/store";
+import { useRef, useState } from "react";
+import { useAppDispatch, useAppSelector } from "@/redux/store";
+import { addTask, removeTask } from "@/redux/slices/tasks";
+import { Task } from "@/components/Task";
+import { Colors } from "@/constants/Colors";
 
 export default function HomeScreen() {
   const descInputRef = useRef<TextInput>(null);
   const { tasks } = useAppSelector((state) => state.tasks);
+  const dispatch = useAppDispatch();
+  const [nameValue, setNameValue] = useState("");
+  const [descValue, setDescValue] = useState("");
+  const [error, setError] = useState("");
+
+  const handleAddingTask = () => {
+    if (!nameValue) {
+      return setError("Please Put in a title");
+    }
+    setError("");
+    dispatch(addTask({ name: nameValue, desc: descValue }));
+    setNameValue("");
+    setDescValue("");
+  };
+
+  const handleTaskDelete = (id: number) => {
+    dispatch(removeTask({ id }));
+  };
 
   return (
     <SafeAreaView style={styles.safeAreaView}>
       <StatusBar translucent={false} backgroundColor="black" />
-      <ScrollView contentContainerStyle={styles.container}>
-        <ThemedView style={styles.top}>
-          <ThemedView style={styles.topInputs}>
-            <ThemedInput
-              onSubmitEditing={() => descInputRef?.current?.focus()}
-              label="Name"
-              returnKeyType="next"
-            />
-            <ThemedInput ref={descInputRef} label="Desc" />
+      <FlatList
+        contentContainerStyle={styles.tasks}
+        data={tasks}
+        renderItem={({ item }) => (
+          <Task onTaskDelete={handleTaskDelete} task={item} />
+        )}
+        ListHeaderComponent={
+          <ThemedView style={styles.top}>
+            <ThemedView style={styles.topInputs}>
+              <ThemedInput
+                onSubmitEditing={() => descInputRef?.current?.focus()}
+                label="Name"
+                onChange={(e) => setNameValue(e.nativeEvent.text)}
+                returnKeyType="next"
+                value={nameValue}
+              />
+              <ThemedInput
+                onChange={(e) => setDescValue(e.nativeEvent.text)}
+                ref={descInputRef}
+                label="Desc"
+                value={descValue}
+              />
+              {error && (
+                <ThemedText style={styles.error} type="desc">
+                  {error}
+                </ThemedText>
+              )}
+            </ThemedView>
+            <Button onPress={() => handleAddingTask()} style={styles.topButton}>
+              <PlusSVG />
+            </Button>
+            {tasks.length === 0 && (
+              <ThemedText style={styles.noTasksText}>No Tasks</ThemedText>
+            )}
           </ThemedView>
-          <Button style={styles.topButton}>
-            <PlusSVG />
-          </Button>
-        </ThemedView>
-        {/* <ThemedView style={styles.stepContainer}>
+        }
+      />
+      {/* <ThemedView style={styles.stepContainer}>
           <ThemedText type="subtitle">Step 1: Try it</ThemedText>
           <ThemedText>
             Edit{" "}
@@ -69,7 +113,6 @@ export default function HomeScreen() {
             <ThemedText type="defaultSemiBold">app-example</ThemedText>.
           </ThemedText>
         </ThemedView> */}
-      </ScrollView>
     </SafeAreaView>
   );
 }
@@ -82,6 +125,7 @@ const styles = StyleSheet.create({
   top: {
     flex: 1,
     gap: 15,
+    marginBottom: 30,
   },
   topInputs: {
     flexDirection: "column",
@@ -95,21 +139,16 @@ const styles = StyleSheet.create({
   },
   container: {
     padding: 24,
+    gap: 20,
   },
-  titleContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 8,
+  tasks: {
+    gap: 15,
+    padding: 20,
   },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
+  noTasksText: {
+    textAlign: "center",
   },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: "absolute",
+  error: {
+    color: Colors.general.error,
   },
 });

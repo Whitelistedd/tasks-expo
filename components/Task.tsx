@@ -24,15 +24,18 @@ export function Task({
     <View style={styles.shadow}>
       <View style={styles.container} {...rest}>
         <View style={styles.text}>
-          <ThemedText type="subtitle">{task.name}</ThemedText>
+          <ThemedText testID="task_title" type="subtitle">
+            {task.name}
+          </ThemedText>
           {task.desc && (
             <>
-              <View style={styles.line} />
+              <View testID="task_line" style={styles.line} />
               <ThemedText type="desc">{task.desc}</ThemedText>
             </>
           )}
         </View>
         <TouchableOpacity
+          testID="delete_button"
           onPress={() => onTaskDelete(task.id)}
           style={styles.deleteButton}
         >

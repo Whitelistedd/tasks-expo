@@ -1,0 +1,854 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`index page given tasks, renders correctly 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "backgroundColor": "white",
+      "flex": 1,
+    }
+  }
+>
+  <RCTScrollView
+    ListHeaderComponent={
+      <ThemedView
+        style={
+          {
+            "flex": 1,
+            "gap": 15,
+            "marginBottom": 30,
+          }
+        }
+      >
+        <ThemedView
+          style={
+            {
+              "flexDirection": "column",
+              "gap": 10,
+            }
+          }
+        >
+          <ForwardRef(ThemedInput)
+            label="Name"
+            onChangeText={[Function]}
+            onSubmitEditing={[Function]}
+            returnKeyType="next"
+            testID="name_input_task_add"
+            value=""
+          />
+          <ForwardRef(ThemedInput)
+            label="Desc"
+            onChangeText={[Function]}
+            value=""
+          />
+          
+        </ThemedView>
+        <Button
+          onPress={[Function]}
+          style={
+            {
+              "alignSelf": "flex-end",
+              "borderRadius": 50,
+              "paddingHorizontal": 10,
+              "paddingVertical": 10,
+            }
+          }
+          testID="add_task_button"
+        >
+          <PlusSVG />
+        </Button>
+      </ThemedView>
+    }
+    contentContainerStyle={
+      {
+        "gap": 15,
+        "padding": 20,
+      }
+    }
+    data={
+      [
+        {
+          "desc": "test",
+          "id": 1,
+          "name": "test",
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={0.0001}
+    stickyHeaderIndices={[]}
+    viewabilityConfigCallbackPairs={[]}
+  >
+    <View>
+      <View
+        collapsable={false}
+        onLayout={[Function]}
+      >
+        <View
+          style={
+            [
+              {
+                "backgroundColor": "#fff",
+              },
+              {
+                "flex": 1,
+                "gap": 15,
+                "marginBottom": 30,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              [
+                {
+                  "backgroundColor": "#fff",
+                },
+                {
+                  "flexDirection": "column",
+                  "gap": 10,
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                {
+                  "gap": 5,
+                }
+              }
+            >
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#11181C",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    {
+                      "fontSize": 13,
+                      "fontWeight": "500",
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                Name
+              </Text>
+              <TextInput
+                onChangeText={[Function]}
+                onSubmitEditing={[Function]}
+                returnKeyType="next"
+                style={
+                  [
+                    {
+                      "borderColor": "#11181C",
+                    },
+                    {
+                      "borderRadius": 8,
+                      "borderWidth": 1,
+                      "flex": 1,
+                      "padding": 8,
+                    },
+                    undefined,
+                  ]
+                }
+                testID="name_input_task_add"
+                value=""
+              />
+            </View>
+            <View
+              style={
+                {
+                  "gap": 5,
+                }
+              }
+            >
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#11181C",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    {
+                      "fontSize": 13,
+                      "fontWeight": "500",
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                Desc
+              </Text>
+              <TextInput
+                onChangeText={[Function]}
+                style={
+                  [
+                    {
+                      "borderColor": "#11181C",
+                    },
+                    {
+                      "borderRadius": 8,
+                      "borderWidth": 1,
+                      "flex": 1,
+                      "padding": 8,
+                    },
+                    undefined,
+                  ]
+                }
+                value=""
+              />
+            </View>
+          </View>
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "alignSelf": "flex-end",
+                "backgroundColor": "#24A19C",
+                "borderRadius": 50,
+                "opacity": 1,
+                "paddingHorizontal": 10,
+                "paddingVertical": 10,
+              }
+            }
+            testID="add_task_button"
+          >
+            <RNSVGSvgView
+              align="xMidYMid"
+              bbHeight="24px"
+              bbWidth="24px"
+              fill="none"
+              focusable={false}
+              height="24px"
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
+              style={
+                [
+                  {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  {
+                    "flex": 0,
+                    "height": 24,
+                    "width": 24,
+                  },
+                ]
+              }
+              vbHeight={24}
+              vbWidth={24}
+              width="24px"
+            >
+              <RNSVGGroup
+                fill={null}
+                propList={
+                  [
+                    "fill",
+                  ]
+                }
+              >
+                <RNSVGPath
+                  d="M4 12H20M12 4V20"
+                  fill={
+                    {
+                      "payload": 4278190080,
+                      "type": 0,
+                    }
+                  }
+                  propList={
+                    [
+                      "stroke",
+                    ]
+                  }
+                  stroke={
+                    {
+                      "payload": 4294967295,
+                      "type": 0,
+                    }
+                  }
+                />
+              </RNSVGGroup>
+            </RNSVGSvgView>
+          </View>
+        </View>
+      </View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            {
+              "backgroundColor": "none",
+              "borderRadius": 16,
+              "elevation": 5,
+              "shadowColor": "#00000050",
+              "shadowOffset": {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 0.25,
+              "shadowRadius": 3.84,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "backgroundColor": "white",
+                "borderRadius": 16,
+                "flexDirection": "row",
+                "gap": 30,
+                "margin": 2,
+                "overflow": "hidden",
+                "padding": 15,
+              }
+            }
+          >
+            <View
+              style={
+                {
+                  "flex": 1,
+                  "gap": 2,
+                }
+              }
+            >
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#11181C",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    {
+                      "fontSize": 20,
+                      "fontWeight": "bold",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                  ]
+                }
+                testID="task_title"
+              >
+                test
+              </Text>
+              <View
+                style={
+                  {
+                    "backgroundColor": "black",
+                    "flex": 1,
+                    "height": 1,
+                  }
+                }
+                testID="task_line"
+              />
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#11181C",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    {
+                      "fontSize": 13,
+                    },
+                    undefined,
+                    undefined,
+                  ]
+                }
+              >
+                test
+              </Text>
+            </View>
+            <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "backgroundColor": "#EA4335",
+                  "borderRadius": 50,
+                  "opacity": 1,
+                  "padding": 3,
+                }
+              }
+              testID="delete_button"
+            >
+              <RNSVGSvgView
+                align="xMidYMid"
+                bbHeight="24px"
+                bbWidth="24px"
+                fill="none"
+                focusable={false}
+                height="24px"
+                meetOrSlice={0}
+                minX={0}
+                minY={0}
+                style={
+                  [
+                    {
+                      "backgroundColor": "transparent",
+                      "borderWidth": 0,
+                    },
+                    {
+                      "flex": 0,
+                      "height": 24,
+                      "width": 24,
+                    },
+                  ]
+                }
+                vbHeight={24}
+                vbWidth={24}
+                width="24px"
+              >
+                <RNSVGGroup
+                  fill={null}
+                  propList={
+                    [
+                      "fill",
+                    ]
+                  }
+                >
+                  <RNSVGGroup
+                    fill={
+                      {
+                        "payload": 4278190080,
+                        "type": 0,
+                      }
+                    }
+                    name="Menu / Close_MD"
+                  >
+                    <RNSVGPath
+                      d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18"
+                      fill={
+                        {
+                          "payload": 4278190080,
+                          "type": 0,
+                        }
+                      }
+                      name="Vector"
+                      propList={
+                        [
+                          "stroke",
+                        ]
+                      }
+                      stroke={
+                        {
+                          "payload": 4294967295,
+                          "type": 0,
+                        }
+                      }
+                    />
+                  </RNSVGGroup>
+                </RNSVGGroup>
+              </RNSVGSvgView>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</RCTSafeAreaView>
+`;
+
+exports[`index page renders correctly when there are no tasks 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "backgroundColor": "white",
+      "flex": 1,
+    }
+  }
+>
+  <RCTScrollView
+    ListHeaderComponent={
+      <ThemedView
+        style={
+          {
+            "flex": 1,
+            "gap": 15,
+            "marginBottom": 30,
+          }
+        }
+      >
+        <ThemedView
+          style={
+            {
+              "flexDirection": "column",
+              "gap": 10,
+            }
+          }
+        >
+          <ForwardRef(ThemedInput)
+            label="Name"
+            onChangeText={[Function]}
+            onSubmitEditing={[Function]}
+            returnKeyType="next"
+            testID="name_input_task_add"
+            value=""
+          />
+          <ForwardRef(ThemedInput)
+            label="Desc"
+            onChangeText={[Function]}
+            value=""
+          />
+          
+        </ThemedView>
+        <Button
+          onPress={[Function]}
+          style={
+            {
+              "alignSelf": "flex-end",
+              "borderRadius": 50,
+              "paddingHorizontal": 10,
+              "paddingVertical": 10,
+            }
+          }
+          testID="add_task_button"
+        >
+          <PlusSVG />
+        </Button>
+      </ThemedView>
+    }
+    contentContainerStyle={
+      {
+        "gap": 15,
+        "padding": 20,
+      }
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={0.0001}
+    stickyHeaderIndices={[]}
+    viewabilityConfigCallbackPairs={[]}
+  >
+    <View>
+      <View
+        collapsable={false}
+        onLayout={[Function]}
+      >
+        <View
+          style={
+            [
+              {
+                "backgroundColor": "#fff",
+              },
+              {
+                "flex": 1,
+                "gap": 15,
+                "marginBottom": 30,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              [
+                {
+                  "backgroundColor": "#fff",
+                },
+                {
+                  "flexDirection": "column",
+                  "gap": 10,
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                {
+                  "gap": 5,
+                }
+              }
+            >
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#11181C",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    {
+                      "fontSize": 13,
+                      "fontWeight": "500",
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                Name
+              </Text>
+              <TextInput
+                onChangeText={[Function]}
+                onSubmitEditing={[Function]}
+                returnKeyType="next"
+                style={
+                  [
+                    {
+                      "borderColor": "#11181C",
+                    },
+                    {
+                      "borderRadius": 8,
+                      "borderWidth": 1,
+                      "flex": 1,
+                      "padding": 8,
+                    },
+                    undefined,
+                  ]
+                }
+                testID="name_input_task_add"
+                value=""
+              />
+            </View>
+            <View
+              style={
+                {
+                  "gap": 5,
+                }
+              }
+            >
+              <Text
+                style={
+                  [
+                    {
+                      "color": "#11181C",
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    {
+                      "fontSize": 13,
+                      "fontWeight": "500",
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                Desc
+              </Text>
+              <TextInput
+                onChangeText={[Function]}
+                style={
+                  [
+                    {
+                      "borderColor": "#11181C",
+                    },
+                    {
+                      "borderRadius": 8,
+                      "borderWidth": 1,
+                      "flex": 1,
+                      "padding": 8,
+                    },
+                    undefined,
+                  ]
+                }
+                value=""
+              />
+            </View>
+          </View>
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "alignSelf": "flex-end",
+                "backgroundColor": "#24A19C",
+                "borderRadius": 50,
+                "opacity": 1,
+                "paddingHorizontal": 10,
+                "paddingVertical": 10,
+              }
+            }
+            testID="add_task_button"
+          >
+            <RNSVGSvgView
+              align="xMidYMid"
+              bbHeight="24px"
+              bbWidth="24px"
+              fill="none"
+              focusable={false}
+              height="24px"
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
+              style={
+                [
+                  {
+                    "backgroundColor": "transparent",
+                    "borderWidth": 0,
+                  },
+                  {
+                    "flex": 0,
+                    "height": 24,
+                    "width": 24,
+                  },
+                ]
+              }
+              vbHeight={24}
+              vbWidth={24}
+              width="24px"
+            >
+              <RNSVGGroup
+                fill={null}
+                propList={
+                  [
+                    "fill",
+                  ]
+                }
+              >
+                <RNSVGPath
+                  d="M4 12H20M12 4V20"
+                  fill={
+                    {
+                      "payload": 4278190080,
+                      "type": 0,
+                    }
+                  }
+                  propList={
+                    [
+                      "stroke",
+                    ]
+                  }
+                  stroke={
+                    {
+                      "payload": 4294967295,
+                      "type": 0,
+                    }
+                  }
+                />
+              </RNSVGGroup>
+            </RNSVGSvgView>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</RCTSafeAreaView>
+`;

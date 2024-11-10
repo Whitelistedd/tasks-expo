@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Component given label, should match snapshot render correctly 1`] = `
+<View
+  style={
+    {
+      "gap": 5,
+    }
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "color": "#11181C",
+        },
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        {
+          "fontSize": 13,
+          "fontWeight": "500",
+        },
+        undefined,
+      ]
+    }
+  >
+    Test
+  </Text>
+  <TextInput
+    style={
+      [
+        {
+          "borderColor": "#11181C",
+        },
+        {
+          "borderRadius": 8,
+          "borderWidth": 1,
+          "flex": 1,
+          "padding": 8,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Button Component renders correctly 1`] = `
+<View
+  style={
+    {
+      "gap": 5,
+    }
+  }
+>
+  <TextInput
+    style={
+      [
+        {
+          "borderColor": "#11181C",
+        },
+        {
+          "borderRadius": 8,
+          "borderWidth": 1,
+          "flex": 1,
+          "padding": 8,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
